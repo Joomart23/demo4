@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Компаниянын Аты</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        header:hover {
+            background-color: #555;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #ffdd57;
+        }
+        section {
+            padding: 20px;
+            margin: 0 auto;
+            max-width: 800px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        section:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li><a href="#home">Башкы бет</a></li>
+            <li><a href="#about">Биз жөнүндө</a></li>
+            <li><a href="#services">Кызматтар</a></li>
+            <li><a href="#contact">Байланыш</a></li>
+        </ul>
+    </nav>
+    <h1>Компаниянын Аты</h1>
+</header>
+
+<section id="home">
+    <h2>Кош келиңиз!</h2>
+    <p>Бул биздин компаниянын расмий веб-сайты. Сиздерди биздин кызматтар жана сунуштар менен тааныштырууга чыдамсыздык менен күтүп жатабыз.</p>
+    <button id="alertButton">Хабарды көрсөт</button>
+</section>
+
+<section id="about">
+    <h2>Биз жөнүндө</h2>
+    <p>Биздин компания 2000-жылдан бери рынокто. Биздин максат - кардарларыбызга эң мыкты кызмат көрсөтүү.</p>
+</section>
+
+<section id="services">
+    <h2>Кызматтар</h2>
+    <ul>
+        <li>Кызмат 1: Маалыматты иштетүү</li>
+        <li>Кызмат 2: Веб-дизайн</li>
+        <li>Кызмат 3: Колдонуучу жардам</li>
+    </ul>
+</section>
+
+<section id="contact">
+    <h2>Байланыш</h2>
+    <p>Электрондук почта: info@company.com</p>
+    <p>Телефон: +123 456 7890</p>
+    <p>Адрес: Ул. Пример, 123, Шаар, Өлкө</p>
+</section>
+
+<footer>
+    <p>&copy; 2024 Компаниянын Аты. Бардык укуктар корголгон.</p>
+</footer>
+
+<script>
+    document.getElementById('alertButton').addEventListener('click', function() {
+        alert('Сиздер менен байланышканыңыз үчүн рахмат!');
+    });
+</script>
+</body>
+</html>

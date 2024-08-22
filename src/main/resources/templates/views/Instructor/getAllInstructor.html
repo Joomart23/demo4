@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java 14 Advanced</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding-top: 20px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #003f82;
+            color: white;
+            padding: 10px 20px;
+        }
+        .header .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .header .user {
+            display: flex;
+            align-items: center;
+        }
+        .header .user img {
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .nav {
+            display: flex;
+            flex-direction: column;
+            width: 20%;
+            float: left;
+            background-color: #fff;
+            margin-right: 20px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+        .nav a {
+            text-decoration: none;
+            padding: 15px;
+            color: #333;
+            display: block;
+            border-bottom: 1px solid #eee;
+        }
+        .nav a:hover {
+            background-color: #f0f0f0;
+        }
+        .content {
+            width: 75%;
+            float: left;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+        .content h2 {
+            margin-top: 0;
+        }
+        .modules {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .module {
+            background-color: #e0e8f7;
+            padding: 20px;
+            margin: 10px;
+            width: 45%;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            font-weight: bold;
+            color: #003f82;
+        }
+        .pagination {
+            clear: both;
+            text-align: center;
+            padding: 20px 0;
+        }
+        .pagination a {
+            text-decoration: none;
+            color: #003f82;
+            padding: 10px 15px;
+            border: 1px solid #003f82;
+            margin: 0 5px;
+        }
+        .pagination a.active {
+            background-color: #003f82;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <div class="logo">PEAKSOFT</div>
+    <div class="user">
+        <img src="user-icon.png" alt="User Icon" width="40" height="40">
+        <span>Студент</span>
+    </div>
+</div>
+<div class="container">
+    <div class="nav">
+        <a th:href="@{/instructor/create}">My courses</a>
+        <a href="#">Shedule</a>
+    </div>
+
+    <div class="content">
+        <h2>Java 14 Advanced</h2>
+        <div class="modules" th:each="com1:${getAllInstructor}">
+            <h5 class="card-title" th:text="${com1.getLastName()}"></h5>
+            <p class="card-text" th:text="${com1.getFistName()}"></p>
+            <p class="card-text" th:text="${com1.getPhoneNumber()}"></p>
+            <a href="/ig" class="btn btn-primary" title="View lessons">OK</a>
+        </div>
+        <div class="pagination">
+            <a href="#">1</a>
+            <!-- Add more pagination links as needed -->
+        </div> <!-- Close pagination div -->
+    </div> <!-- Close content div -->
+</div> <!-- Close container div -->
+</body>
+</html>

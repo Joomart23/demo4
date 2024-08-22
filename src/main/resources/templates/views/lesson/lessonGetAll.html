@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java 14 Advanced</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .sidebar {
+            width: 200px;
+            background-color: #e3e3e3;
+            height: 100vh;
+            padding: 20px;
+            position: fixed;
+        }
+        .sidebar h2 {
+            font-size: 1.5rem;
+            margin-top: 0;
+        }
+        .sidebar a {
+            display: block;
+            color: #333;
+            padding: 10px 0;
+            text-decoration: none;
+        }
+        .sidebar a:hover {
+            background-color: #ccc;
+        }
+        .content {
+            margin-left: 220px;
+            padding: 20px;
+        }
+        .content h1 {
+            font-size: 24px;
+        }
+        .course-section {
+            background-color: #e8f0fe;
+            padding: 10px;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+        .card {
+            width: 18rem;
+            margin-top: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+        .card .btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            border: none;
+            border-radius: 0 0 5px 5px;
+        }
+        .card .btn:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+<div class="sidebar">
+    <h2>PEAKSOFT</h2>
+    <a href="#">Мои курсы</a>
+    <a href="#">Расписание</a>
+</div>
+
+<div class="content">
+    <h1>Java 14 Advanced</h1>
+    <div class="course-section">
+        <h2>1. Introduction</h2>
+    </div>
+
+    <!-- Example card element -->
+    <div class="card" th:each="com1 : ${lessonGetAll1}">
+        <p class="card-text" th:text="${com1.lessonName}"></p>
+    <form th:method="post" th:action="@{/lessons/{id}/delete(id=${com1.id})}">
+<!--        <input type="hidden" name="_method" value="delete">-->
+        <input type="submit" value="Delete">
+    </form>
+</div>
+    <a href="/lessons/create1" class="btn" title="Create new course">Create</a>
+</div>
+
+</body>
+</html>
+
+
+
+

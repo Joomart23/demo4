@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация формасы</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f9;
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKgWGHCi8H82jQ-Z5TPlMfvgulkIgCpNVS2HEBzgp_tb0h7W0mDPc9KdcMBJMDrlbIzM4&usqp=CAU');
+            background-size: cover; /* Сүрөттү толугу менен жабуу */
+            background-position: center; /* Сүрөттү борборго жайгаштыруу */
+            background-repeat: no-repeat; /* Сүрөттүн кайталанышына жол бербөө */
+            background-attachment: fixed; /* Сүрөттүн баракты скролдоп бара жатканда жылбашы */
+        }
+        .form-container {
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9); /* Фонго жарым-жартылай көрүңкү ак түс */
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: box-shadow 0.3s ease;
+        }
+        .form-container:hover {
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #555;
+        }
+        .form-group input {
+            width: calc(100% - 16px);
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .form-group input:focus {
+            border-color: #4CAF50;
+            outline: none;
+            box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+        }
+        .form-group button {
+            width: 100%;
+            padding: 14px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .form-group button:hover {
+            background-color: #45a049;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .form-group button:active {
+            background-color: #388e3c;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+<div class="form-container">
+    <h1>Регистрация</h1>
+    <form   >
+        <div class="form-group">
+            <label for="name">Аты</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="country">Мамлекет</label>
+            <input type="text" id="country" name="country" required>
+        </div>
+        <div class="form-group">
+            <label for="address">Дарек</label>
+            <input type="text" id="address" name="address" required>
+        </div>
+        <div class="form-group">
+            <label for="phoneNumber">Телефон номер</label>
+            <input type="tel" id="phoneNumber" name="phoneNumber" required>
+        </div>
+        <div class="form-group">
+            <button type="submit">Жөнөтүү</button>
+        </div>
+    </form>
+</div>
+
+
+    // Форма маалымат
